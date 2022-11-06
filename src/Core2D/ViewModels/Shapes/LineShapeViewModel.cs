@@ -11,10 +11,14 @@ namespace Core2D.ViewModels.Shapes;
 
 public partial class LineShapeViewModel : BaseShapeViewModel
 {
-    [AutoNotify] private PointShapeViewModel? _start;
-    [AutoNotify] private PointShapeViewModel? _end;
+    [AutoNotify] protected PointShapeViewModel? _start;
+    [AutoNotify] protected PointShapeViewModel? _end;
 
     public LineShapeViewModel(IServiceProvider? serviceProvider) : base(serviceProvider, typeof(LineShapeViewModel))
+    {
+    }
+
+    protected LineShapeViewModel(IServiceProvider? serviceProvider, Type targetType) : base(serviceProvider, targetType)
     {
     }
 

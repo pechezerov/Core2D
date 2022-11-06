@@ -11,11 +11,15 @@ namespace Core2D.ViewModels.Shapes;
 
 public partial class ImageShapeViewModel : BaseShapeViewModel
 {
-    [AutoNotify] private PointShapeViewModel? _topLeft;
-    [AutoNotify] private PointShapeViewModel? _bottomRight;
-    [AutoNotify] private string? _key;
+    [AutoNotify] protected PointShapeViewModel? _topLeft;
+    [AutoNotify] protected PointShapeViewModel? _bottomRight;
+    [AutoNotify] protected string? _key;
 
     public ImageShapeViewModel(IServiceProvider? serviceProvider) : base(serviceProvider, typeof(ImageShapeViewModel))
+    {
+    }
+
+    protected ImageShapeViewModel(IServiceProvider? serviceProvider, Type targetType) : base(serviceProvider, targetType)
     {
     }
 

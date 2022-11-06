@@ -124,7 +124,7 @@ public partial class ProjectEditorViewModel
         }
     }
 
-    private void OnResetTool()
+    public void OnResetTool()
     {
         CurrentTool?.Reset();
     }
